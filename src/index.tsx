@@ -1,8 +1,8 @@
 import { useEffect, useCallback, useRef } from "react";
 
-export const useMyHook = (
+export const useIntersectionObserver = (
 	callback: (entries: IntersectionObserverEntry[], observer?: IntersectionObserver) => void,
-	options: IntersectionObserverInit
+	options?: IntersectionObserverInit
 ) => {
 	const observerRef = useRef<IntersectionObserver>();
 
