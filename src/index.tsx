@@ -17,10 +17,10 @@ export const useIntersectionObserver = (
 	);
 
 	useEffect(() => {
-    return () => {
-      observerRef.current?.disconnect()
-    }
-  }, []);
+		return () => {
+			observerRef.current?.disconnect();
+		};
+	}, []);
 
 	return { observer: observerRef.current, observe };
 };
