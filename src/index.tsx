@@ -1,23 +1,26 @@
-import * as React from 'react';
+import { useEffect, useCallback, useRef } from "react";
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState<{
-    counter: number;
-  }>({
-    counter: 0
-  });
+export const useMyHook = (
+	callback: (entries: IntersectionObserverEntry[], observer?: IntersectionObserver) => void,
+	options: IntersectionObserverInit
+) => {
+	const observerRef = useRef<IntersectionObserver>();
 
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++;
-      setState({counter})
-    }, 1000)
+	const observe = useCallback(
+		(node: HTMLElement) => {
+			if (!observerRef.current) {
+				observerRef.current = new IntersectionObserver(callback, options);
+			}
+			observerRef.current.observe(node);
+		},
+		[callback, options, observerRef]
+	);
+
+	useEffect(() => {
     return () => {
-      window.clearInterval(interval);
-    };
+      observerRef.current?.disconnect()
+    }
   }, []);
 
-  return counter;
+	return { observer: observerRef.current, observe };
 };
