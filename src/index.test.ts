@@ -9,7 +9,7 @@ jest.useFakeTimers();
 describe('useMyHook', () => {
   it('updates every second', () => {
     const value = renderHook(() => useIntersectionObserver(entries => {
-
+      console.log(entries)
     }, {}))
 
     expect(value).toBeDefined()
