@@ -1,6 +1,6 @@
 {
   "name": "react-intersection-observer-hooks",
-  "version": "1.0.0",
+  "version": "1.0.0-hotfix-1",
   "description": "easy to use hook for intersection observers",
   "author": "GypsyDangerous",
   "license": "MIT",
