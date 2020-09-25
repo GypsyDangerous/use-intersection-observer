@@ -1,5 +1,5 @@
 {
-  "name": "use-intersection-observer",
+  "name": "react-intersection-observer-hooks",
   "version": "1.0.0",
   "description": "easy to use hook for intersection observers",
   "author": "GypsyDangerous",
