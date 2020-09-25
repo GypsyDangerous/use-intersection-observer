@@ -2,7 +2,7 @@
 
 > easy to use hook for intersection observers
 
-[![NPM](https://img.shields.io/npm/v/react-intersection-observer-hooks.svg?style=for-the-badge)](https://www.npmjs.com/package/use-intersection-observer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-intersection-observer-hooks.svg?style=for-the-badge)](https://www.npmjs.com/package/react-intersection-observer-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge)](https://standardjs.com)
 
 ## Install
 
